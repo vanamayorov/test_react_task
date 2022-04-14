@@ -1,0 +1,6 @@
+@import "../../../styles/mixins";
+
+.card_link {
+    @include text-clamp(1);
+    display: block;
+}

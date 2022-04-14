@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.users_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px 20px;
+}
+
+.users_list__item {
+    padding: 0 8px;
+    max-width: 33.333%;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include media-w($sm) {
+        max-width: 50%;
+        margin-bottom: 15px;
+    }
+
+    @include media-w($xs) {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/vars";
+
+.positions_wrapper {
+    position: relative;
+}
+
+.positions_subtitle {
+    margin-bottom: 10px;
+}
+
+.positions_list {
+    margin-bottom: 45px;
+}
+
+.positions_list_item {
+    &:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}
+
+.positions_error {
+    position: absolute;
+    font-size: 12px;
+    left: 15px;
+    bottom: -20px;
+    color: $error-color;
+}

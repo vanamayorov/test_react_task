@@ -1,0 +1,64 @@
+@import '../../../styles/vars';
+
+.phone_input_group {
+    position: relative;
+    margin-bottom: 50px;
+
+    & .phone_input:not(:placeholder-shown) ~ .phone_input_label {
+        font-size: 12px;
+            top: -10px;
+            z-index: 1;
+            padding: 0 4px;
+    }
+}
+
+.phone_input_label {
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 15px;
+    color: $grey-text;
+    background-color: $bg-color;
+    transition: all 0.3s;
+
+    &__error {
+        color: $error-color;
+    }
+}
+
+.phone_input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid $grey-color;
+    border-radius: 4px;
+    background-color: transparent;
+
+    &__error {
+        border: 2px solid $error-color;
+    }
+
+    &:focus {
+        border-color: $grey-color;
+
+        & + .input_label {
+            font-size: 12px;
+            top: -10px;
+            z-index: 1;
+            padding: 0 4px;
+        }
+    }
+
+    &:focus-visible {
+        outline: $grey-color;
+    }
+}
+
+.text_below {
+    font-size: 12px;
+    color: $grey-text;
+    margin-left: 15px;
+    
+    &__error {
+        color: $error-color;
+    }
+}

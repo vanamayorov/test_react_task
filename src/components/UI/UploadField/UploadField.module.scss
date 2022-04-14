@@ -1,0 +1,57 @@
+@import "../../../styles/vars";
+
+.upload_field_wrapper {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.upload_field_input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.upload_field__action {
+    color: $black-color;
+    border: 1px solid $black-color;
+    border-radius: 4px 0px 0px 4px;
+    padding: 14px 15px;
+
+    &__error {
+        border-width: 2px;
+        border-color: $error-color;
+    }
+}
+
+.upload_field__filename {
+    display: flex;
+    align-items: center;
+    border: 1px solid $grey-color;
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+    width: 100%;
+    color: $grey-text;
+    padding-left: 15px;
+
+    &__error {
+        border-width: 2px;
+        border-color: $error-color;
+    }
+
+    span {
+        color: $black-color;
+    }
+}
+
+
+.text_below {
+    font-size: 12px;
+    position: absolute;
+    color: $error-color;
+    bottom: -20px;
+    left: 15px;
+}

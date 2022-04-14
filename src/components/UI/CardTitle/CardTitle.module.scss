@@ -1,0 +1,9 @@
+@import "../../../styles/mixins";
+
+.card_title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+
+    @include text-clamp(1);
+}

@@ -1,0 +1,40 @@
+@import "../../styles/vars";
+
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: $bg-header;
+    margin-top: 60px;
+
+
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, $black-gradient, $black-gradient);
+        z-index: 1;
+    }
+}
+
+.banner__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 380px;
+    margin: 0 auto;
+    min-height: calc(100vh - 60px);
+    z-index: 2;
+}
+
+.banner__title {
+    margin-bottom: 20px;
+}
+
+.banner__content {
+    margin-bottom: 30px;
+}

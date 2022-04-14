@@ -1,0 +1,65 @@
+@import '../../../styles/vars';
+
+.input_group {
+    position: relative;
+    margin-bottom: 50px;
+
+    & .input:not(:placeholder-shown) ~ .input_label {
+        font-size: 12px;
+            top: -10px;
+            z-index: 1;
+            padding: 0 4px;
+    }
+}
+
+.input_label {
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 15px;
+    color: $grey-text;
+    background-color: $bg-color;
+    transition: all 0.3s;
+
+    &__error {
+        color: $error-color;
+    }
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid $grey-color;
+    border-radius: 4px;
+    background-color: transparent;
+
+    &__error {
+        border: 2px solid $error-color;
+    }
+
+    &:focus {
+        border-color: $grey-color;
+
+        & + .input_label {
+            font-size: 12px;
+            top: -10px;
+            z-index: 1;
+            padding: 0 4px;
+        }
+    }
+
+    &:focus-visible {
+        outline: $grey-color;
+    }
+}
+
+.text_below {
+    // display: none;
+    font-size: 12px;
+    color: $grey-text;
+    margin-left: 15px;
+    
+    &__error {
+        color: $error-color;
+    }
+}

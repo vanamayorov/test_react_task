@@ -1,0 +1,32 @@
+@import "../../../styles/vars";
+
+.btn {
+    display: inline-block;
+    min-width: 100px;
+    padding: 4px;
+    text-align: center;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 80px;
+    color: $black-color;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &__wide {
+        min-width: 120px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: $btn-hover;
+    }
+
+    &:disabled {
+        background-color: $btn-disabled;
+        color: $white-color;
+        cursor: initial;
+    }
+}
